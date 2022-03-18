@@ -1,238 +1,304 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--========== BOX ICONS ==========-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!--========== BOX ICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
 
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="/assets/css/styles.css">
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 
-        <title>Felipe Wolff CV</title>
-    </head>
-    <body>
-        <!--========== HEADER ==========-->
-        <header class="l-header" id="header">
-            <nav class="nav bd-containter">
-                <a href="#" class="nav__logo">Wolff</a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="bx bx-home nav__icon"></i>Home
-                            </a>
-                        </li>
+    <title>Felipe Wolff CV</title>
+  </head>
+  <body>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-containter">
+        <a href="#" class="nav__logo">Wolff</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home nav__icon"></i>Home
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="#profile" class="nav__link">
-                                <i class="bx bx-user nav__icon"></i>Profile
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>Profile
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="#education" class="nav__link">
-                                <i class="bx bx-book nav__icon"></i>Education
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__link">
+                <i class="bx bx-book nav__icon"></i>Education
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="bx bx-receipt nav__icon"></i>Skills
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="bx bx-receipt nav__icon"></i>Skills
+              </a>
+            </li>
 
-                        <li class="nav__item">
-                            <a href="#experience" class="nav__link">
-                                <i class="bx bx-briefcase-alt nav__icon"></i>Experience
-                            </a>
-                        </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link">
+                <i class="bx bx-briefcase-alt nav__icon"></i>Experience
+              </a>
+            </li>
 
-                        <!-- <li class="nav__item">
+            <!-- <li class="nav__item">
                             <a href="#certificates" class="nav__link">
                                 <i class="bx bx-award nav__icon"></i>Certificates
                             </a>
                         </li> -->
-                        <li class="nav__item">
-                            <a href="#references" class="nav__link">
-                                <i class="bx bx-link-external nav__icon"></i>References
-                            </a>
-                        </li>
-                    </ul>
+            <li class="nav__item">
+              <a href="#references" class="nav__link">
+                <i class="bx bx-link-external nav__icon"></i>References
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main bd-container">
+      <!-- All elements within this div, is generated in PDF -->
+      <div class="resume" id="area-cv">
+        <div class="resume__left">
+          <!--========== HOME ==========-->
+          <section class="home" id="home">
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <img src="assets/img/eugray.jpg" alt="" class="home__img" />
+                <h1 class="home__title">FELIPE <b>WOLFF</b></h1>
+                <h3 class="home__profession">Web developer</h3>
+
+                <!-- Button to generate and download the pdf. Available for desktop. -->
+                <div>
+                  <a
+                    download=""
+                    href="assets/pdf/FelipeWolffResume.pdf"
+                    class="home__button-movil"
+                    >Download</a
+                  >
+                </div>
+              </div>
+
+              <div class="home__address bd-grid">
+                <span class="home__information">
+                  <i class="bx bx-map"></i> Gold coast, Surfers Paradise.
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-envelope"></i> auauwolff@gmail.com
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-phone"></i> 0420 713 810
+                </span>
+              </div>
+            </div>
+            <!-- Theme change button -->
+            <i
+              class="bx bx-moon change-theme"
+              title="Theme"
+              id="theme-button"
+            ></i>
+
+            <i
+              class="bx bx-download generate-pdf"
+              title="Generate PDF"
+              id="resume-button"
+            ></i>
+          </section>
+
+          <!--========== SOCIAL ==========-->
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
+
+            <div class="social__container bd-grid">
+              <a
+                href="https://www.linkedin.com/in/felipe-wolff-a2575624/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-linkedin-square social__icon"></i> @felipewolff
+              </a>
+              <a
+                href="https://github.com/auauwolff"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-github social__icon"></i> @auauwolff
+              </a>
+              <a
+                href="https://www.instagram.com/felipewolffo/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-instagram social__icon"></i> @felipewolffo
+              </a>
+            </div>
+          </section>
+
+          <!--========== PROFILE ==========-->
+          <section class="profile section" id="profile">
+            <h2 class="section-title">Profile</h2>
+
+            <p class="profile__description">
+              Living the Aussie dream on the Gold Coast, currently enrolled on a
+              Masters of Information Technology with Specialization in Data
+              Science at Southern Cross University and build amazing things to
+              help people through technology. <br /><br />
+
+              "Belief in yourself, listen to your gut, and do what you love. "
+              (Dylan Lauren). <br /><br />
+
+              If you like to know more about me, please feel free to
+              <a href="#home" class="nav__link"><b>contact me.</b></a>
+              <br /><br />
+            </p>
+          </section>
+
+          <!--========== SKILLS  ==========-->
+          <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__content bd-grid">
+              <ul class="skills__data">
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Html
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Css
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Sass
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> JavaScript
+                </li>
+              </ul>
+              <ul class="skills__data">
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Agile
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> React
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Data Analysis
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> GraphQL
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <div class="resume__right">
+          <!--========== EXPERIENCE ==========-->
+          <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience__container bd-grid">
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">FRONT-END DEVELOPER</h3>
+                  <span class="experience__company"
+                    >From 2018 to 2022 | DHI GROUP</span
+                  >
+                  <p class="experience__description">
+                    My achievements in this position were to work efficiently as a team and in different projects, maintaining a clean code structure that is maintainable for future interactions—creating user-friendly front-end applications using React.
+                    <a
+                      href="https://www.dhigroup.com/"
+                      target="_blank"
+                      class="nav__link"
+                      >DHI Group</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="experience__container bd-grid">
+                <div class="experience__content">
+                  <div class="experience__time">
+                    <span class="experience__rounder"></span>
+                    <span class="experience__line"></span>
+                  </div>
+                  <div class="experience__data bd-grid">
+                    <h3 class="experience__title">WEB DEVELOPER</h3>
+                    <span class="experience__company"
+                      >From 2017 to 2018 | Wolffo.Design</span
+                    >
+                    <p class="experience__description">
+                        That's my freelance company, where I built beautiful websites using UI/UX techniques, front-end, and back-end development. Check out my portfolio
+                      <a
+                        href="https://wolffodesign.netlify.app/"
+                        target="_blank"
+                        class="nav__link"
+                        >wolffo.design</a
+                      >
+                    </p>
+                  </div>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="bx bx-grid-alt"></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main bd-container">
-            <!-- All elements within this div, is generated in PDF -->
-            <div class="resume" id="area-cv">
-                <div class="resume__left">
-                    <!--========== HOME ==========-->
-                    <section class="home" id="home">
-                        <div class="home__container section bd-grid">
-                            <div class="home__data bd-grid">
-                               <img src="assets/img/eugray.jpg" alt="" class="home__img">
-                               <h1 class="home__title">FELIPE <b>WOLFF</b></h1>
-                               <h3 class="home__profession">Web developer</h3>
-
-                              <!-- Button to generate and download the pdf. Available for desktop. -->
-                                <div>
-                                    <a download="" href="assets/pdf/FelipeWolffResume.pdf" class="home__button-movil">Download</a>
-                                </div>
-                            </div>
-
-                            <div class="home__address bd-grid">
-                                <span class="home__information"> 
-                                    <i class="bx bx-map"></i> Gold coast, Surfers Paradise.
-                                </span>
-                                <span class="home__information"> 
-                                    <i class="bx bx-envelope"></i> felipe@wolffo.design
-                                </span>
-                                <span class="home__information"> 
-                                    <i class="bx bx-phone"></i> 0420 713 810
-                                </span>
-                            </div>
-                        </div>
-                        <!-- Theme change button -->
-                        <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
-                        
-                        <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
-                      
-                    </section>          
-                    
-                    <!--========== SOCIAL ==========-->
-                    <section class="social section">
-                        <h2 class="section-title">SOCIAL</h2>
-
-                        <div class="social__container bd-grid">
-                            <a href="https://www.linkedin.com/in/felipe-wolff-a2575624/" target="_blank" class="social__link">
-                                <i class="bx bxl-linkedin-square social__icon"></i> @felipewolff
-                            </a>
-                            <a href="https://github.com/auauwolff" target="_blank" class="social__link">
-                                <i class="bx bxl-github social__icon"></i> @auauwolff
-                            </a>
-                            <a href="https://www.instagram.com/felipewolffo/" target="_blank" class="social__link">
-                                <i class="bx bxl-instagram social__icon"></i> @felipewolffo
-                            </a>
-                        </div>
-                    </section>
-
-                    <!--========== PROFILE ==========-->
-                    <section class="profile section" id="profile">
-                        <h2 class="section-title">Profile</h2>
-
-                        <p class="profile__description">
-                            Living the Aussie dream on the Gold Coast, currently studying Masters in Information Technology with Specialization in Data Science at Southern Cross University and working at the Star Resort during this time. <br><br>
-
-I am looking for a new commencing in the I.T industry, where I can build amazing things to help people through technology. <br><br>
-
-"Belief in yourself, listen to your gut, and do what you love. " (Dylan Lauren). <br><br>
-
-If you like to know more about me, please feel free to <a href="#home" class="nav__link"><b>contact me.</b></a> <br><br>
-                        </p>
-                    </section>
-                   
-
-                    <!--========== SKILLS  ==========-->
-                    <section class="skills section" id="skills">
-                        <h2 class="section-title">Skills</h2>
-
-                        <div class="skills__content bd-grid">
-                            <ul class="skills__data">
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Html
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Css
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Sass
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> JavaScript
-                                </li>
-                            </ul>
-                            <ul class="skills__data">
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> SQL
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> React
-                                </li>
-                                <li class="skills__name">
-                                    <span class="skills__circle"></span> Data Analysis
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
                 </div>
 
-                <div class="resume__right">
-                    <!--========== EXPERIENCE ==========-->
-                    <section class="experience section" id="experience">
-                        <h2 class="section-title">Experience</h2>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">SYSTEM ANALYST</h3>
+                  <span class="experience__company"
+                    >From 2015 to 2017 | Betha Systems</span
+                  >
+                  <p class="experience__description">
+                    As a system analyst, I was required to communicate with
+                    clients, understand their problems, and propose solutions. I
+                    also customized system functions to attend to customers'
+                    needs and build reports with SQL queries.
+                  </p>
+                </div>
+              </div>
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <!-- <span class="experience__line"></span> -->
+                </div>
 
-                        <div class="experience__container bd-grid">
-                            <div class="experience__content">
-                                <div class="experience__time">
-                                    <span class="experience__rounder"></span>
-                                    <span class="experience__line"></span>
-                                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">SYSTEM ANALYST</h3>
+                  <span class="experience__company"
+                    >From 2012 to 2015 | Plasoft Software</span
+                  >
+                  <p class="experience__description">
+                    As a system analyst, I was required to communicate with
+                    clients, understand their problems, and propose solutions. I
+                    also customized system functions to attend to customers'
+                    needs and build reports with SQL queries. 
+                    <!-- In this case, I worked with a customizable ERP system developed in-house. -->
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-                                <div class="experience__data bd-grid">
-                                    <h3 class="experience__title">WEB DEVELOPER</h3>
-                                    <span class="experience__company">From 2020 to 2021 | Wolffo.Design</span>
-                                    <p class="experience__description"> That's my freelance company where I build beautiful websites using UI/UX techniques, front-end, and back-end development. Check out my portfolio <a href="https://wolffo.design/" target="_blank" class="nav__link">wolffo.design.</a></p>
-                                </div>
-                            </div>
-                            <div class="experience__content">
-                                <div class="experience__time">
-                                    <span class="experience__rounder"></span>
-                                    <span class="experience__line"></span>
-                                </div>
-
-                                <div class="experience__data bd-grid">
-                                    <h3 class="experience__title">SYSTEM ANALYST</h3>
-                                    <span class="experience__company">From 2015 to 2017 | Betha Systems</span>
-                                    <p class="experience__description"> As a system analyst, I was required to communicate with clients, understand their problems, and propose solutions. I also customized system functions to attend to customers' needs and build reports with SQL queries.</p>
-                                </div>
-                            </div>
-                            <div class="experience__content">
-                                <div class="experience__time">
-                                    <span class="experience__rounder"></span>
-                                    <span class="experience__line"></span>
-                                </div>
-
-                                <div class="experience__data bd-grid">
-                                    <h3 class="experience__title">SYSTEM ANALYST</h3>
-                                    <span class="experience__company">From 2012 to 2015 | Plasoft Software</span>
-                                    <p class="experience__description"> 
-                                        As a system analyst, I was required to communicate with clients, understand their problems, and propose solutions. I also customized system functions to attend to customers' needs and build reports with SQL queries. In this case, I worked with a customizable ERP system developed in-house.</p>
-                                </div>
-                            </div>
-                            <div class="experience__content">
-                                <div class="experience__time">
-                                    <span class="experience__rounder"></span>
-                                    <!-- <span class="experience__line"></span> -->
-                                </div>
-
-                                <div class="experience__data bd-grid">
-                                    <h3 class="experience__title">BARISTA</h3>
-                                    <span class="experience__company">From 2018 to 2021 | Tap and Grind Cafe</span>
-                                    <p class="experience__description"> 
-                                        Making people happy with amazing coffees in an awesome environment. That was my job!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- ========== CERTIFICATES ==========
+          <!-- ========== CERTIFICATES ==========
                     <section class="certificate section" id="certificates">
                         <h2 class="section-title">Certificates</h2>
 
@@ -247,82 +313,90 @@ If you like to know more about me, please feel free to <a href="#home" class="na
                             </div>
                         </div>
                     </section> -->
-                 <!--========== EDUCATION ==========-->
-                    <section class="education section" id="education">
-                        <h2 class="section-title">Education</h2>
+          <!--========== EDUCATION ==========-->
+          <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
 
-                        <div class="education__container bd-grid">
-                            <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder"> </span>
-                                        <span class="education__line"></span>
-                                   
-                                </div>
+            <div class="education__container bd-grid">
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"> </span>
+                  <span class="education__line"></span>
+                </div>
 
-                                <div class="education__data bd-grid">
-                                    <h3 class="education__title">MASTERS OF INFORMATION TECHNOLOGY</h3>
-                                    <span class="education__studies">Southern Cross University - Australia</span>
-                                    <span class="education__year">2021 - present</span>
-                                </div>
-                            </div>
-                            <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder"> </span>
-                                        <span class="education__line"></span>
-                                   
-                                </div>
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">
+                    MASTERS OF INFORMATION TECHNOLOGY
+                  </h3>
+                  <span class="education__studies"
+                    >Southern Cross University - Australia</span
+                  >
+                  <span class="education__year">2021 - present</span>
+                </div>
+              </div>
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"> </span>
+                  <span class="education__line"></span>
+                </div>
 
-                                <div class="education__data bd-grid">
-                                    <h3 class="education__title">BACHAREL OF INFORMATION TECHNOLOGY</h3>
-                                    <span class="education__studies"> University of Planalto Catarinense - Brazil</span>
-                                    <span class="education__year">2010 - 2014</span>
-                                </div>
-                            </div>
-                            <div class="education__content">
-                                <div class="education__time">
-                                    <span class="education__rounder">
-                                        <!-- <span class="education__line"></span> -->
-                                    </span>
-                                </div>
+                <div class="education__data bd-grid">
+                    <h3 class="education__title">
+                      ADVANCED DIPLOMA OF HUMAN RESOURCES
+                    </h3>
+                    <span class="education__studies">Academique - Australia</span>
+                    <span class="education__year">2018 - 2020</span>
+                  </div>
+              </div>
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder">
+                    <!-- <span class="education__line"></span> -->
+                  </span>
+                </div>
+                <div class="education__data bd-grid">
+                    <h3 class="education__title">
+                      BACHELOR OF INFORMATION TECHNOLOGY
+                    </h3>
+                    <span class="education__studies">
+                      University of Planalto Catarinense - Brazil</span
+                    >
+                    <span class="education__year">2010 - 2014</span>
+                  </div>
+                
+              </div>
+            </div>
+          </section>
 
-                                <div class="education__data bd-grid">
-                                    <h3 class="education__title">ADVANCED DIPLOMA OF HUMAN RESOURCES</h3>
-                                    <span class="education__studies">Academique - Australia</span>
-                                    <span class="education__year">2018 - 2020</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+          <!--========== REFERENCES ==========-->
+          <section class="references section" id="references">
+            <h2 class="section-title">References</h2>
 
-                    <!--========== REFERENCES ==========-->
-                    <section class="references section" id="references">
-                         <h2 class="section-title">References</h2>
+            <div class="references__container bd-grid">
+              <div class="references__content bd-grid">
+                <span class="references__subtitle"
+                  >CEO DHI Group Australia</span
+                >
+                <h3 class="references__title">Mr.Con Nostradamus</h3>
+                <ul class="references__contact">
+                  <!-- <li>Phone: 0451 042 225</li> -->
+                  <li>Email: connostradamus@dhi.com</li>
+                </ul>
+              </div>
 
-                         <div class="references__container bd-grid">
-                             <div class="references__content bd-grid">
-                                 <span class="references__subtitle">Director Tap and Grind Cafe</span>
-                                 <h3 class="references__title">Miss.Vanessa Rubini</h3>
-                                 <ul class="references__contact">
-                                     <!-- <li>Phone: 0451 042 225</li> -->
-                                     <li>Email: vanessa.rubini@hotmail.com</li>
-                                 </ul>
-                             </div>
-
-                             <!-- <div class="references__content bd-grid">
-                                <span class="references__subtitle">Sr.Developer</span>
-                                <h3 class="references__title">Mr. Clay DuEIT</h3>
+              <div class="references__content bd-grid">
+                                <span class="references__subtitle">Scrum Master DHI Group</span>
+                                <h3 class="references__title">Mr. Clay Doe</h3>
                                 <ul class="references__contact">
-                                    <li>Phone: 0420 713 810</li>
-                                    <li>Email: user@gmail.com</li>
+                                    <!-- <li>Phone: 0420 713 810</li> -->
+                                    <li>Email: claydoe@dhi.com</li>
                                 </ul>
-                            </div> -->
-                         </div>
-                    </section>
+                            </div>
+            </div>
+          </section>
 
-                   
-
-                    <!--========== LANGUAGES ==========-->
-                    <!-- <section class="languages section">
+          <!--========== LANGUAGES ==========-->
+          <!-- <section class="languages section">
                         <h2 class="section-title">Languages</h2>
                         <div class="languages__container">
                             <ul class="languages__content bd-grid">
@@ -338,51 +412,51 @@ If you like to know more about me, please feel free to <a href="#home" class="na
                             </ul>
                         </div>
                     </section> -->
-                    
-                    <!--========== INTERESTS ==========-->
-                    <section class="interests section">
-                        <h2 class="section-title">Interests</h2>
 
-                        <div class="interests__container bd-grid">
-                            <!-- <div class="interests__content">
+          <!--========== INTERESTS ==========-->
+          <section class="interests section">
+            <h2 class="section-title">Interests</h2>
+
+            <div class="interests__container bd-grid">
+              <!-- <div class="interests__content">
                                 <i class="bx bx-headphone interests__icon"></i>
                                 <span class="interests__name">Music</span>
                             </div> -->
-                            <!-- <div class="interests__content">
+              <!-- <div class="interests__content">
                                 <i class="bx bxs-plane-alt interests__icon"></i>
                                 <span class="interests__name">Travel</span>
                             </div> -->
-                            <div class="interests__content">
-                                <i class="bx bx-book interests__icon"></i>
-                                <span class="interests__name">Read</span>
-                            </div>
-                            <div class="interests__content">
-                                <i class="bx bx-dumbbell interests__icon"></i>
-                                <span class="interests__name">Fitness</span>
-                            </div>
-                            <div class="interests__content">
-                                <i class="bx bx-laptop interests__icon"></i>
-                                <span class="interests__name">Technology</span>
-                            </div>
-                            <div class="interests__content">
-                                <i class="bx bx-bitcoin interests__icon"></i>
-                                <span class="interests__name">Crypto</span>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>        
-        </main>
+              <div class="interests__content">
+                <i class="bx bx-book interests__icon"></i>
+                <span class="interests__name">Read</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-dumbbell interests__icon"></i>
+                <span class="interests__name">Fitness</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-laptop interests__icon"></i>
+                <span class="interests__name">Technology</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-bitcoin interests__icon"></i>
+                <span class="interests__name">Crypto</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
 
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
-        </a>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
 
-        <!--========== HTML2PDF ==========-->
-        <script src="/assets/js/html2pdf.bundle.min.js"></script>
+    <!--========== HTML2PDF ==========-->
+    <script src="/assets/js/html2pdf.bundle.min.js"></script>
 
-        <!--========== MAIN JS ==========-->
-        <script src="/assets/js/main.js"></script>
-    </body>
+    <!--========== MAIN JS ==========-->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>
