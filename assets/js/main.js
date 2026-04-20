@@ -84,11 +84,13 @@ themeButton.addEventListener('click', () => {
 /*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/ 
 function scaleCv(){
     document.body.classList.add('scale-cv')
+    document.body.classList.add('pdf-mode')
 }
 
 /*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/ 
 function removeScale(){
     document.body.classList.remove('scale-cv')
+    document.body.classList.remove('pdf-mode')
 }
 
 /*==================== GENERATE PDF ====================*/ 
@@ -109,19 +111,58 @@ let opt = {
 
 // Function to call areaCv and Html2Pdf options 
 function generateResume(){
-    html2pdf(areaCv, opt)
+    return html2pdf(areaCv, opt)
 }
 
 // When the button is clicked, it executes the three functions
 resumeButton.addEventListener('click',()=>{
  // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
  scaleCv()
+ closeShareModal()
 
-    // 2. The PDF is generated
-generateResume()
+    // 2. Wait for layout update, then generate the PDF
+    setTimeout(() => {
+        generateResume().then(() => {
+            removeScale()
+        }).catch(() => {
+            removeScale()
+        })
+    }, 250)
+})
 
-    // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+/*==================== SHARE MODAL ====================*/
+const shareModal = document.getElementById('share-modal')
+const shareButton = document.getElementById('share-button')
+const shareModalClose = document.getElementById('share-modal-close')
+const shareModalOverlay = document.getElementById('share-modal-overlay')
 
-    setTimeout(removeScale, 5000)
+function openShareModal(){
+    if(shareModal){
+        shareModal.classList.add('show-share-modal')
+        shareModal.setAttribute('aria-hidden', 'false')
+    }
+}
+
+function closeShareModal(){
+    if(shareModal){
+        shareModal.classList.remove('show-share-modal')
+        shareModal.setAttribute('aria-hidden', 'true')
+    }
+}
+
+if(shareButton){
+    shareButton.addEventListener('click', openShareModal)
+}
+
+if(shareModalClose){
+    shareModalClose.addEventListener('click', closeShareModal)
+}
+
+if(shareModalOverlay){
+    shareModalOverlay.addEventListener('click', closeShareModal)
+}
+
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape') closeShareModal()
 })
    

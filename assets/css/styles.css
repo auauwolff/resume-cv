@@ -65,7 +65,18 @@ body.dark-theme{
   cursor: pointer;
 }
 
-.change-theme:hover{
+.share-resume{
+  display: flex;
+  position: absolute;
+  top: 2.2rem;
+  left: 2rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.change-theme:hover,
+.share-resume:hover{
   color: var(--title-color);
 }
 
@@ -81,7 +92,7 @@ body.scale-cv{
 
 /*========== Generate PDF button ==========*/
 .generate-pdf{
-  display: none;
+  display: flex;
   position: absolute;
   top: 2.2rem;
   left: 0;
@@ -98,8 +109,37 @@ body.scale-cv{
 
 .scale-cv .change-them,
 .scale-cv .generate-pdf,
-.scale-cv .change-theme{
+.scale-cv .change-theme,
+.scale-cv .share-resume,
+.scale-cv .share-modal{
   display: none;
+}
+
+.pdf-mode .l-header,
+.pdf-mode .scrolltop,
+.pdf-mode .change-theme,
+.pdf-mode .generate-pdf,
+.pdf-mode .share-resume,
+.pdf-mode .share-modal,
+.pdf-mode .home__button-movil{
+  display: none !important;
+}
+
+.pdf-mode .bd-container{
+  max-width: 595px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pdf-mode .resume{
+  display: grid;
+  grid-template-columns: .46fr 1fr;
+}
+
+.pdf-mode .resume__left,
+.pdf-mode .resume__right{
+  padding: 0 1rem;
 }
 
 .scale-cv .bd-container{
@@ -386,8 +426,6 @@ img{
   margin-top: var(--mb-3);
 }
 
-
-
 .home__button-movil:hover{
   background-color: var(--text-color);
   color: var(--container-color);
@@ -414,6 +452,72 @@ img{
 .social__icon{
   font-size: 1.2rem;
   margin-right: .25rem;
+}
+
+/*========== SHARE MODAL ==========*/
+.share-modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.share-modal.show-share-modal{
+  display: flex;
+}
+
+.share-modal__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+}
+
+.share-modal__content{
+  position: relative;
+  z-index: 1;
+  background: var(--container-color);
+  color: var(--text-color);
+  padding: 1.25rem;
+  border-radius: .75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  width: min(90vw, 320px);
+}
+
+.share-modal__close{
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.share-modal__title{
+  font-size: var(--h3-font-size);
+  margin-top: .25rem;
+}
+
+.share-modal__qr{
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.share-modal__link{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  text-align: center;
+  word-break: break-word;
 }
 
 /*========== PROFILE ==========*/
@@ -615,7 +719,8 @@ bottom: 5rem;
     padding: 0 1.5rem;
   }
 
-  .generate-pdf{
+  .generate-pdf,
+  .share-resume{
     display: inline-block;
   }
 
@@ -627,9 +732,6 @@ bottom: 5rem;
 .home__container{
   gap: 1.5rem;
 
-}
-.home__button-movil{
-  display: none;
 }
 
 .certificate__container{
@@ -676,7 +778,9 @@ bottom: 5rem;
   .scrolltop,
   .change-theme,
   .generate-pdf,
-  .home__button-movil {
+  .share-resume,
+  .home__button-movil,
+  .share-modal {
     display: none !important;
   }
 
@@ -728,6 +832,7 @@ bottom: 5rem;
   .social__container {
     gap: .35rem;
   }
+
 
   .profile__description,
   .experience__description,

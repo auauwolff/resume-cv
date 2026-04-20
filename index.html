@@ -76,17 +76,7 @@
               <div class="home__data bd-grid">
                 <img src="assets/img/felipe-wolff.jpeg" alt="Felipe Wolff profile photo" class="home__img" />
                 <h1 class="home__title">FELIPE <b>WOLFF</b></h1>
-                <h3 class="home__profession">Frontend Engineer | React, TypeScript & Architecture</h3>
-
-                <!-- Button to generate and download the pdf. Available for desktop. -->
-                <div>
-                  <a
-                    download=""
-                    href="assets/pdf/Felipe-Wolff-Resume.pdf"
-                    class="home__button-movil"
-                    >Download</a
-                  >
-                </div>
+                <h3 class="home__profession">Software Engineer | React, TypeScript & Architecture</h3>
               </div>
 
               <div class="home__address bd-grid">
@@ -108,6 +98,12 @@
               class="bx bx-moon change-theme"
               title="Theme"
               id="theme-button"
+            ></i>
+
+            <i
+              class="bx bx-share-alt share-resume"
+              title="Share resume"
+              id="share-button"
             ></i>
 
             <i
@@ -421,6 +417,33 @@
     <a href="#" class="scrolltop" id="scroll-top">
       <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
     </a>
+
+    <div class="share-modal" id="share-modal" aria-hidden="true">
+      <div class="share-modal__overlay" id="share-modal-overlay"></div>
+      <div class="share-modal__content" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+        <button
+          type="button"
+          class="share-modal__close"
+          id="share-modal-close"
+          aria-label="Close share dialog"
+        >
+          <i class="bx bx-x"></i>
+        </button>
+        <h3 class="share-modal__title" id="share-modal-title">Share resume</h3>
+        <img
+          src="assets/img/felipe-wolff-resume-qr.png"
+          alt="QR code linking to Felipe Wolff's online resume"
+          class="share-modal__qr"
+        />
+        <a
+          href="https://felipewolffresume.netlify.app/"
+          target="_blank"
+          class="share-modal__link"
+        >
+          felipewolffresume.netlify.app
+        </a>
+      </div>
+    </div>
 
     <!--========== HTML2PDF ==========-->
     <script src="/assets/js/html2pdf.bundle.min.js"></script>
