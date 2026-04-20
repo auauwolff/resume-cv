@@ -650,3 +650,128 @@ bottom: 5rem;
 
 
 }
+
+@page {
+  size: A4;
+  margin: 5mm;
+}
+
+@media print {
+  :root {
+    --h1-font-size: .9rem;
+    --h2-font-size: .84rem;
+    --h3-font-size: .78rem;
+    --normal-font-size: .72rem;
+    --small-font-size: .67rem;
+    --smaller-font-size: .62rem;
+  }
+
+  body {
+    margin: 0;
+    background-color: #fff;
+    zoom: .94;
+  }
+
+  .l-header,
+  .scrolltop,
+  .change-theme,
+  .generate-pdf,
+  .home__button-movil {
+    display: none !important;
+  }
+
+  .bd-container {
+    width: 100%;
+    max-width: 595px;
+    margin: 0 auto;
+  }
+
+  .resume {
+    display: grid;
+    grid-template-columns: .46fr 1fr;
+    box-shadow: none;
+  }
+
+  .resume__left,
+  .resume__right {
+    padding: 0 .7rem;
+  }
+
+  .section {
+    padding: .22rem 0;
+  }
+
+  .section-title {
+    margin-bottom: .42rem;
+    letter-spacing: .14rem;
+  }
+
+  .bd-grid,
+  .home__container,
+  .education__container,
+  .experience__container,
+  .certificate__container {
+    gap: .55rem;
+  }
+
+  .home__img {
+    width: 74px;
+    height: 74px;
+    margin-bottom: .15rem;
+  }
+
+  .home__data {
+    gap: .15rem;
+  }
+
+  .home__address,
+  .social__container {
+    gap: .35rem;
+  }
+
+  .profile__description,
+  .experience__description,
+  .certificate__description,
+  .social__link,
+  .home__information {
+    line-height: 1.18;
+  }
+
+  .education__time,
+  .experience__time {
+    padding-right: .5rem;
+  }
+
+  .education__rounder,
+  .experience__rounder {
+    width: 11px;
+    height: 11px;
+    margin-top: .22rem;
+  }
+
+  .education__line,
+  .experience__line {
+    width: 1px;
+    transform: translate(5px, 0);
+  }
+
+  .education__data,
+  .experience__data {
+    gap: .15rem;
+  }
+
+  .skills__name,
+  .languages__name {
+    margin-bottom: .3rem;
+  }
+
+  .interests__icon,
+  .social__icon,
+  .home__icon {
+    font-size: 1rem;
+  }
+
+  .interests__container {
+    margin-top: .45rem;
+  }
+}
