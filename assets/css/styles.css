@@ -531,6 +531,7 @@ font-size: var(--h3-font-size);
 /*========== INTERESTS ==========*/
 .interests__container{
   grid-template-columns: repeat(3,1fr);
+  justify-items: center;
   margin-top: var(--mb-2);
 }
 
@@ -631,8 +632,8 @@ bottom: 5rem;
   display: none;
 }
 
-.references__container{
-  grid-template-columns: repeat(2, 1fr);
+.certificate__container{
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .languages__content{
@@ -642,8 +643,9 @@ bottom: 5rem;
 
 
 .interests__container{
-  grid-template-columns: repeat(4, max-content);
-  column-gap: 3.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  justify-items: center;
 }
 
 
