@@ -84,50 +84,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/ 
-function scaleCv(){
-    document.body.classList.add('scale-cv')
-    document.body.classList.add('pdf-mode')
-}
-
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/ 
-function removeScale(){
-    document.body.classList.remove('scale-cv')
-    document.body.classList.remove('pdf-mode')
-}
-
-/*==================== CV DOWNLOAD ====================*/ 
-const resumeButton = document.getElementById('resume-button')
-
-// The main download button links to a pre-built CV PDF.
-// Keep the older html2pdf flow available only if the button has no href.
-if(resumeButton && !resumeButton.getAttribute('href') && typeof html2pdf !== 'undefined'){
-    const areaCv = document.getElementById('area-cv')
-
-    const opt = {
-        margin:       0,
-        filename:     'Felipe-Wolff-CV.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 4 },
-        jsPDF:        {  format: 'a4', orientation: 'portrait' }
-    };
-
-    const generateResume = () => html2pdf(areaCv, opt)
-
-    resumeButton.addEventListener('click',()=>{
-        scaleCv()
-        closeShareModal()
-
-        setTimeout(() => {
-            generateResume().then(() => {
-                removeScale()
-            }).catch(() => {
-                removeScale()
-            })
-        }, 250)
-    })
-}
-
 /*==================== SHARE MODAL ====================*/
 const shareModal = document.getElementById('share-modal')
 const shareButton = document.getElementById('share-button')
