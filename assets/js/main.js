@@ -32,12 +32,15 @@ function scrollActive(){
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionId = current.getAttribute('id')
+        const menuLink = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+        if(!menuLink) return
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            menuLink.classList.add('active-link')
         }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            menuLink.classList.remove('active-link')
         }
     })
 }
@@ -93,42 +96,37 @@ function removeScale(){
     document.body.classList.remove('pdf-mode')
 }
 
-/*==================== GENERATE PDF ====================*/ 
-// PDF generated area
-let areaCv = document.getElementById('area-cv')
+/*==================== CV DOWNLOAD ====================*/ 
+const resumeButton = document.getElementById('resume-button')
 
+// The main download button links to a pre-built CV PDF.
+// Keep the older html2pdf flow available only if the button has no href.
+if(resumeButton && !resumeButton.getAttribute('href') && typeof html2pdf !== 'undefined'){
+    const areaCv = document.getElementById('area-cv')
 
-let resumeButton = document.getElementById('resume-button')
+    const opt = {
+        margin:       0,
+        filename:     'Felipe-Wolff-CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 4 },
+        jsPDF:        {  format: 'a4', orientation: 'portrait' }
+    };
 
-// Html2pdf options
-let opt = {
-    margin:       0,
-    filename:     'Felipe-Wolff-Resume.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 4 },
-    jsPDF:        {  format: 'a4', orientation: 'portrait' }
-  };
+    const generateResume = () => html2pdf(areaCv, opt)
 
-// Function to call areaCv and Html2Pdf options 
-function generateResume(){
-    return html2pdf(areaCv, opt)
+    resumeButton.addEventListener('click',()=>{
+        scaleCv()
+        closeShareModal()
+
+        setTimeout(() => {
+            generateResume().then(() => {
+                removeScale()
+            }).catch(() => {
+                removeScale()
+            })
+        }, 250)
+    })
 }
-
-// When the button is clicked, it executes the three functions
-resumeButton.addEventListener('click',()=>{
- // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
- scaleCv()
- closeShareModal()
-
-    // 2. Wait for layout update, then generate the PDF
-    setTimeout(() => {
-        generateResume().then(() => {
-            removeScale()
-        }).catch(() => {
-            removeScale()
-        })
-    }, 250)
-})
 
 /*==================== SHARE MODAL ====================*/
 const shareModal = document.getElementById('share-modal')

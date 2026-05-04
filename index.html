@@ -81,7 +81,7 @@
 
               <div class="home__address bd-grid">
                 <span class="home__information">
-                  <i class="bx bx-map"></i> Gold Coast, Queensland, Australia
+                  <i class="bx bx-map"></i> Gold Coast, Australia
                 </span>
                 <span class="home__information">
                   <i class="bx bx-envelope"></i>
@@ -91,6 +91,23 @@
                   <i class="bx bx-phone"></i>
                   <a href="tel:+61420713810">0420 713 810</a>
                 </span>
+              </div>
+
+              <div class="home__downloads no-print" aria-label="CV downloads">
+                <a
+                  href="assets/pdf/Felipe-Wolff-CV.pdf"
+                  download="Felipe-Wolff-CV.pdf"
+                  class="home__download-link"
+                >
+                  CV PDF
+                </a>
+                <a
+                  href="assets/doc/Felipe-Wolff-CV.docx"
+                  download="Felipe-Wolff-CV.docx"
+                  class="home__download-link"
+                >
+                  CV DOCX
+                </a>
               </div>
             </div>
             <!-- Theme change button -->
@@ -102,19 +119,24 @@
 
             <i
               class="bx bx-share-alt share-resume"
-              title="Share resume"
+              title="Share CV"
               id="share-button"
             ></i>
 
-            <i
-              class="bx bx-download generate-pdf"
-              title="Generate PDF"
+            <a
+              href="assets/pdf/Felipe-Wolff-CV.pdf"
+              download="Felipe-Wolff-CV.pdf"
+              class="generate-pdf"
+              title="Download CV PDF"
               id="resume-button"
-            ></i>
+              aria-label="Download CV PDF"
+            >
+              <i class="bx bx-download"></i>
+            </a>
           </section>
 
           <!--========== SOCIAL ==========-->
-          <section class="social section">
+          <section class="social section no-print">
             <h2 class="section-title">SOCIAL</h2>
 
             <div class="social__container bd-grid">
@@ -147,15 +169,14 @@
 
             <p class="profile__description">
               Frontend Engineer based on the Gold Coast, building modern web
-              applications with React, TypeScript, and scalable frontend
-              architecture. Currently at DHI Seaport, contributing across
-              delivery, code quality, and product-focused engineering.
+              applications with React, TypeScript, design patterns, and scalable
+              application architecture. Currently at DHI Seaport, contributing
+              across delivery, code quality, and product-focused engineering.
               <br /><br />
 
               My background in systems analysis, SQL reporting, and client
-              implementation complements a Master of Information Technology in
-              Artificial Intelligence and an interest in data visualisation and
-              AI-assisted development.
+              implementation combines with postgraduate study in Data Science
+              and an interest in data visualisation and AI-assisted development.
             </p>
           </section>
 
@@ -175,7 +196,7 @@
                   <span class="skills__circle"></span> React
                 </li>
                 <li class="skills__name">
-                  <span class="skills__circle"></span> Frontend Architecture
+                  <span class="skills__circle"></span> Design Patterns
                 </li>
                 <li class="skills__name">
                   <span class="skills__circle"></span> Material UI
@@ -221,8 +242,9 @@
                   <p class="experience__description">
                     Lead frontend delivery across production applications using
                     React, TypeScript, Material UI, MobX, and modern web
-                    tooling. Contribute to architecture decisions, improve code
-                    quality and maintainability, and explore newer capabilities
+                    tooling. Contribute to application architecture and design
+                    pattern decisions, improve code quality and maintainability,
+                    and explore newer capabilities
                     such as AI-assisted and agentic workflows to support product
                     development.
                   </p>
@@ -328,7 +350,7 @@
                   <span class="education__studies"
                     >Southern Cross University - Australia</span
                   >
-                  <span class="education__year">2021 - 2023 | Artificial Intelligence</span>
+                  <span class="education__year">2021 - 2023 | Data Science</span>
                 </div>
               </div>
               <div class="education__content">
@@ -429,10 +451,10 @@
         >
           <i class="bx bx-x"></i>
         </button>
-        <h3 class="share-modal__title" id="share-modal-title">Share resume</h3>
+        <h3 class="share-modal__title" id="share-modal-title">Share CV</h3>
         <img
           src="assets/img/felipe-wolff-resume-qr.png"
-          alt="QR code linking to Felipe Wolff's online resume"
+          alt="QR code linking to Felipe Wolff's online CV"
           class="share-modal__qr"
         />
         <a
@@ -444,9 +466,6 @@
         </a>
       </div>
     </div>
-
-    <!--========== HTML2PDF ==========-->
-    <script src="/assets/js/html2pdf.bundle.min.js"></script>
 
     <!--========== MAIN JS ==========-->
     <script src="/assets/js/main.js"></script>

@@ -111,7 +111,8 @@ body.scale-cv{
 .scale-cv .generate-pdf,
 .scale-cv .change-theme,
 .scale-cv .share-resume,
-.scale-cv .share-modal{
+.scale-cv .share-modal,
+.scale-cv .no-print{
   display: none;
 }
 
@@ -121,7 +122,8 @@ body.scale-cv{
 .pdf-mode .generate-pdf,
 .pdf-mode .share-resume,
 .pdf-mode .share-modal,
-.pdf-mode .home__button-movil{
+.pdf-mode .home__button-movil,
+.pdf-mode .no-print{
   display: none !important;
 }
 
@@ -429,6 +431,31 @@ img{
 .home__button-movil:hover{
   background-color: var(--text-color);
   color: var(--container-color);
+}
+
+.home__downloads{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+
+.home__download-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--text-color-light);
+  border-radius: .25rem;
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  padding: .35rem .5rem;
+}
+
+.home__download-link:hover{
+  border-color: var(--title-color);
+  color: var(--title-color);
 }
 
 /*========== SOCIAL ==========*/
@@ -780,7 +807,8 @@ bottom: 5rem;
   .generate-pdf,
   .share-resume,
   .home__button-movil,
-  .share-modal {
+  .share-modal,
+  .no-print {
     display: none !important;
   }
 
